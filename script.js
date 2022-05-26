@@ -3,6 +3,7 @@ const spanQuote = document.querySelector(".quote")
 const author = document.querySelector(".author")
 const quoteBtn = document.querySelector(".generator")
 const tweetBtn = document.querySelector(".twitter")
+const facebookBtn = document.querySelector(".facebook")
 const loader = document.querySelector(".loader")
 let quoteApi = []
 
@@ -44,11 +45,16 @@ async function getQuotes(){
 }
 
 function tweetQuote(){
-    const tweetUlr = `https://twitter.com/intent/tweet?text=${spanQuote.textContent} - ${author.textContent}`
+    const tweetUlr = `https://twitter.com/intent/tweet?text="${spanQuote.textContent}" - ${author.textContent}`
     window.open(tweetUlr, "_blank")
+}
+function facebookQuote(){
+    const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=https://quotes-react.netlify.app/&src=sdkpreparse&quote="${spanQuote.textContent}" - ${author.textContent}`
+    window.open(facebookUrl, "_blank")
 }
 
 quoteBtn.addEventListener("click", newQuote)
 tweetBtn.addEventListener("click", tweetQuote)
+facebookBtn.addEventListener("click", facebookQuote)
 
 getQuotes()

@@ -49,6 +49,7 @@ body{
     font-weight: bold;
     background-color: #333;
     color: #fff;
+    border: 2px solid #333;
     border-radius: 10px;
     padding: 0.6rem 2.2rem;
     box-shadow: 0 0.3rem rgba(0, 0, 0, 0.2);
@@ -61,6 +62,10 @@ body{
 .twitter:hover{
     background-color: transparent;
     color: #1DA1F2;
+}
+.facebook:hover{
+    background-color: transparent;
+    color: #4267B2;
 }
 .generator:hover{
     background-color: transparent;
@@ -89,7 +94,7 @@ body{
         min-width: auto;   
     }
 }
-@media ( max-width: 400px) {
+@media ( max-width: 500px) {
     .btn-container{
         flex-direction: column;
     }
